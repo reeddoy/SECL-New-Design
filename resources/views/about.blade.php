@@ -187,6 +187,9 @@
     </div>
     <div class="cta-shape"><img src="{{ asset('assets/img/normal/cta_1.png') }}" alt=""></div>
 </section>
+
+
+
 <section class="space" id="team-sec">
     <div class="container">
         <div class="row">
@@ -197,237 +200,34 @@
             </div>
         </div>
         <div class="row gy-4 gx-30">
+            @foreach ($members as $member)
             <div class="col-xl-3 col-lg-4 col-md-6">
                 <div class="th-team team-grid">
                     <div class="team-grid_wrapper">
-                        <div class="team-img"><img src="{{ asset('assets/img/team/team_4_1.jpg') }}" alt="Team"></div>
+                        <div class="team-img"><img src="{{ asset('storage/' .$member->image) }}" alt="{{ $member->name }}"></div>
                         <div class="media-body">
-                            <h3 class="box-title"><a href="team-details.html">Mishel Marsh</a></h3><span
-                                class="team-desig">Engineer</span>
+                            <h3 class="box-title"><a href="#">{{ $member->name }}</a></h3><span
+                                class="team-desig">{{ $member->designation }}</span>
                         </div>
                     </div>
                     <div class="team-content">
-                        <p class="sec-text">Good communication is crucial in the construction industry.</p>
-                        <div class="th-social"><a href="https://www.facebook.com/"><i
-                                    class="fa-brands fa-vimeo-v"></i></a> <a href="https://www.facebook.com/"><i
-                                    class="fab fa-facebook-f"></i></a> <a href="https://www.twitter.com/"><i
-                                    class="fab fa-twitter"></i></a> <a href="https://www.linkedin.com/"><i
-                                    class="fab fa-linkedin-in"></i></a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
-                <div class="th-team team-grid">
-                    <div class="team-grid_wrapper">
-                        <div class="team-img"><img src="{{ asset('assets/img/team/team_4_2.jpg') }}" alt="Team"></div>
-                        <div class="media-body">
-                            <h3 class="box-title"><a href="team-details.html">Famhida Ruko</a></h3><span
-                                class="team-desig">Founder</span>
+                        <p class="sec-text">Thank you for visiting SECL. We are very excited to work with you.</p>
+                        <div class="th-social"> 
+                            <a href="{{ $member->facebook }}"><i class="fab fa-facebook-f"></i></a> 
+                            <a href="{{ $member->twitter }}"><i class="fab fa-twitter"></i></a>
+                            <a href="{{ $member->instagram }}"><i class="fab fa-instagram"></i></a>
+                            <a href="{{ $member->linkedin }}"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
-                    <div class="team-content">
-                        <p class="sec-text">Residential construction focuses on building homes.</p>
-                        <div class="th-social"><a href="https://www.facebook.com/"><i
-                                    class="fa-brands fa-vimeo-v"></i></a> <a href="https://www.facebook.com/"><i
-                                    class="fab fa-facebook-f"></i></a> <a href="https://www.twitter.com/"><i
-                                    class="fab fa-twitter"></i></a> <a href="https://www.linkedin.com/"><i
-                                    class="fab fa-linkedin-in"></i></a></div>
-                    </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
-                <div class="th-team team-grid">
-                    <div class="team-grid_wrapper">
-                        <div class="team-img"><img src="{{ asset('assets/img/team/team_4_3.jpg') }}" alt="Team"></div>
-                        <div class="media-body">
-                            <h3 class="box-title"><a href="team-details.html">Alex Anfantino</a></h3><span
-                                class="team-desig">Architecture</span>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <p class="sec-text">Along with design, architecture firms often offer project.</p>
-                        <div class="th-social"><a href="https://www.facebook.com/"><i
-                                    class="fa-brands fa-vimeo-v"></i></a> <a href="https://www.facebook.com/"><i
-                                    class="fab fa-facebook-f"></i></a> <a href="https://www.twitter.com/"><i
-                                    class="fab fa-twitter"></i></a> <a href="https://www.linkedin.com/"><i
-                                    class="fab fa-linkedin-in"></i></a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
-                <div class="th-team team-grid">
-                    <div class="team-grid_wrapper">
-                        <div class="team-img"><img src="{{ asset('assets/img/team/team_4_4.jpg') }}" alt="Team"></div>
-                        <div class="media-body">
-                            <h3 class="box-title"><a href="team-details.html">Henry Joshep</a></h3><span
-                                class="team-desig">Site Manager</span>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <p class="sec-text">Residential construction focuses on building homes.</p>
-                        <div class="th-social"><a href="https://www.facebook.com/"><i
-                                    class="fa-brands fa-vimeo-v"></i></a> <a href="https://www.facebook.com/"><i
-                                    class="fab fa-facebook-f"></i></a> <a href="https://www.twitter.com/"><i
-                                    class="fab fa-twitter"></i></a> <a href="https://www.linkedin.com/"><i
-                                    class="fab fa-linkedin-in"></i></a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
-                <div class="th-team team-grid">
-                    <div class="team-grid_wrapper">
-                        <div class="team-img"><img src="{{ asset('assets/img/team/team_4_5.jpg') }}" alt="Team"></div>
-                        <div class="media-body">
-                            <h3 class="box-title"><a href="team-details.html">Sinthia Komley</a></h3><span
-                                class="team-desig">Engineer</span>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <p class="sec-text">Good communication is crucial in the construction industry.</p>
-                        <div class="th-social"><a href="https://www.facebook.com/"><i
-                                    class="fa-brands fa-vimeo-v"></i></a> <a href="https://www.facebook.com/"><i
-                                    class="fab fa-facebook-f"></i></a> <a href="https://www.twitter.com/"><i
-                                    class="fab fa-twitter"></i></a> <a href="https://www.linkedin.com/"><i
-                                    class="fab fa-linkedin-in"></i></a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
-                <div class="th-team team-grid">
-                    <div class="team-grid_wrapper">
-                        <div class="team-img"><img src="{{ asset('assets/img/team/team_4_6.jpg') }}" alt="Team"></div>
-                        <div class="media-body">
-                            <h3 class="box-title"><a href="team-details.html">Noah James</a></h3><span
-                                class="team-desig">Founder</span>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <p class="sec-text">Residential construction focuses on building homes.</p>
-                        <div class="th-social"><a href="https://www.facebook.com/"><i
-                                    class="fa-brands fa-vimeo-v"></i></a> <a href="https://www.facebook.com/"><i
-                                    class="fab fa-facebook-f"></i></a> <a href="https://www.twitter.com/"><i
-                                    class="fab fa-twitter"></i></a> <a href="https://www.linkedin.com/"><i
-                                    class="fab fa-linkedin-in"></i></a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
-                <div class="th-team team-grid">
-                    <div class="team-grid_wrapper">
-                        <div class="team-img"><img src="{{ asset('assets/img/team/team_4_7.jpg') }}" alt="Team"></div>
-                        <div class="media-body">
-                            <h3 class="box-title"><a href="team-details.html">Lima Margret</a></h3><span
-                                class="team-desig">Architecture</span>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <p class="sec-text">Residential construction focuses on building homes.</p>
-                        <div class="th-social"><a href="https://www.facebook.com/"><i
-                                    class="fa-brands fa-vimeo-v"></i></a> <a href="https://www.facebook.com/"><i
-                                    class="fab fa-facebook-f"></i></a> <a href="https://www.twitter.com/"><i
-                                    class="fab fa-twitter"></i></a> <a href="https://www.linkedin.com/"><i
-                                    class="fab fa-linkedin-in"></i></a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
-                <div class="th-team team-grid">
-                    <div class="team-grid_wrapper">
-                        <div class="team-img"><img src="{{ asset('assets/img/team/team_4_8.jpg') }}" alt="Team"></div>
-                        <div class="media-body">
-                            <h3 class="box-title"><a href="team-details.html">Mason Robert</a></h3><span
-                                class="team-desig">Site Manager</span>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <p class="sec-text">Residential construction focuses on building homes.</p>
-                        <div class="th-social"><a href="https://www.facebook.com/"><i
-                                    class="fa-brands fa-vimeo-v"></i></a> <a href="https://www.facebook.com/"><i
-                                    class="fab fa-facebook-f"></i></a> <a href="https://www.twitter.com/"><i
-                                    class="fab fa-twitter"></i></a> <a href="https://www.linkedin.com/"><i
-                                    class="fab fa-linkedin-in"></i></a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
-                <div class="th-team team-grid">
-                    <div class="team-grid_wrapper">
-                        <div class="team-img"><img src="{{ asset('assets/img/team/team_4_9.jpg') }}" alt="Team"></div>
-                        <div class="media-body">
-                            <h3 class="box-title"><a href="team-details.html">Ethan David</a></h3><span
-                                class="team-desig">Engineer</span>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <p class="sec-text">Good communication is crucial in the construction industry.</p>
-                        <div class="th-social"><a href="https://www.facebook.com/"><i
-                                    class="fa-brands fa-vimeo-v"></i></a> <a href="https://www.facebook.com/"><i
-                                    class="fab fa-facebook-f"></i></a> <a href="https://www.twitter.com/"><i
-                                    class="fab fa-twitter"></i></a> <a href="https://www.linkedin.com/"><i
-                                    class="fab fa-linkedin-in"></i></a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
-                <div class="th-team team-grid">
-                    <div class="team-grid_wrapper">
-                        <div class="team-img"><img src="{{ asset('assets/img/team/team_4_10.jpg') }}" alt="Team"></div>
-                        <div class="media-body">
-                            <h3 class="box-title"><a href="team-details.html">Daniel Thomas</a></h3><span
-                                class="team-desig">Founder</span>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <p class="sec-text">Residential construction focuses on building homes.</p>
-                        <div class="th-social"><a href="https://www.facebook.com/"><i
-                                    class="fa-brands fa-vimeo-v"></i></a> <a href="https://www.facebook.com/"><i
-                                    class="fab fa-facebook-f"></i></a> <a href="https://www.twitter.com/"><i
-                                    class="fab fa-twitter"></i></a> <a href="https://www.linkedin.com/"><i
-                                    class="fab fa-linkedin-in"></i></a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
-                <div class="th-team team-grid">
-                    <div class="team-grid_wrapper">
-                        <div class="team-img"><img src="{{ asset('assets/img/team/team_4_11.jpg') }}" alt="Team"></div>
-                        <div class="media-body">
-                            <h3 class="box-title"><a href="team-details.html">James Charles</a></h3><span
-                                class="team-desig">Architecture</span>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <p class="sec-text">Along with design, architecture firms often offer project.</p>
-                        <div class="th-social"><a href="https://www.facebook.com/"><i
-                                    class="fa-brands fa-vimeo-v"></i></a> <a href="https://www.facebook.com/"><i
-                                    class="fab fa-facebook-f"></i></a> <a href="https://www.twitter.com/"><i
-                                    class="fab fa-twitter"></i></a> <a href="https://www.linkedin.com/"><i
-                                    class="fab fa-linkedin-in"></i></a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
-                <div class="th-team team-grid">
-                    <div class="team-grid_wrapper">
-                        <div class="team-img"><img src="{{ asset('assets/img/team/team_4_12.jpg') }}" alt="Team"></div>
-                        <div class="media-body">
-                            <h3 class="box-title"><a href="team-details.html">Wilson Byrne</a></h3><span
-                                class="team-desig">Site Manager</span>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <p class="sec-text">Residential construction focuses on building homes.</p>
-                        <div class="th-social"><a href="https://www.facebook.com/"><i
-                                    class="fa-brands fa-vimeo-v"></i></a> <a href="https://www.facebook.com/"><i
-                                    class="fab fa-facebook-f"></i></a> <a href="https://www.twitter.com/"><i
-                                    class="fab fa-twitter"></i></a> <a href="https://www.linkedin.com/"><i
-                                    class="fab fa-linkedin-in"></i></a></div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>
+
+
+
 <section class="why-sec3 space" data-bg-src="{{ asset('assets/img/bg/why_bg_3.jpg') }}">
     <div class="container">
         <div class="history-item-right">
