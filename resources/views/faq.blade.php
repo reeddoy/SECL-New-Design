@@ -16,7 +16,7 @@
         <div class="breadcumb-content">
             <h1 class="breadcumb-title">FAQs</h1>
             <ul class="breadcumb-menu">
-                <li><a href="home-company.html">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li>FAQs</li>
             </ul>
         </div>

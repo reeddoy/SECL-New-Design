@@ -221,7 +221,7 @@
                 </div>
             </div>
             <div class="col-auto">
-                <div class="sec-btn"><a href="service.html" class="th-btn th-icon">View
+                <div class="sec-btn"><a href="{{ url('/service') }}" class="th-btn th-icon">View
                         All Services<i class="fa-regular fa-arrow-right ms-2"></i></a></div>
             </div>
         </div>
@@ -249,14 +249,14 @@
                             <div id="collapse-1" class="accordion-collapse collapse show"
                                 aria-labelledby="collapse-item-1" data-bs-parent="#serviceAccordion">
                                 <div class="accordion-body">
-                                    <p class="faq-text">The process
-                                        varies by location, but
-                                        generally involves submitting
-                                        detailed plans to local
-                                        authorities, paying permit fees,
-                                        and ensuring compliance with
-                                        building codes and zoning
-                                        regulations.</p>
+                                    <ul class="faq-text d-md-flex justify-content-between" style="width: 80%;">
+                                        <li>Project Planning</li>
+                                        <li>Project Management</li>
+                                    </ul>
+                                    <ul class="faq-text d-md-flex justify-content-between mt-2" style="width: 80%;">
+                                        <li>Project Management</li>
+                                        <li>Project Management</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -273,14 +273,14 @@
                             <div id="collapse-2" class="accordion-collapse collapse"
                                 aria-labelledby="collapse-item-2" data-bs-parent="#serviceAccordion">
                                 <div class="accordion-body">
-                                    <p class="faq-text">Architectural
-                                        wonders await firms offer
-                                        project Our management services.
-                                        Along with design architecture
-                                        firms including design
-                                        principles, construction
-                                        techniques, and the evolution of
-                                        architectural</p>
+                                    <ul class="faq-text d-md-flex justify-content-between" style="width: 80%;">
+                                        <li>Project Planning</li>
+                                        <li>Project Management</li>
+                                    </ul>
+                                    <ul class="faq-text d-md-flex justify-content-between mt-2" style="width: 80%;">
+                                        <li>Project Management</li>
+                                        <li>Project Management</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -297,14 +297,14 @@
                             <div id="collapse-3" class="accordion-collapse collapse"
                                 aria-labelledby="collapse-item-3" data-bs-parent="#serviceAccordion">
                                 <div class="accordion-body">
-                                    <p class="faq-text">Interior design
-                                        is a multifaceted field that
-                                        involves creating functional and
-                                        aesthetically pleasing interior
-                                        spaces It combines creativity,
-                                        technical knowledge, and
-                                        problem-solving skills to
-                                        enhance</p>
+                                    <ul class="faq-text d-md-flex justify-content-between" style="width: 80%;">
+                                        <li>Project Planning</li>
+                                        <li>Project Management</li>
+                                    </ul>
+                                    <ul class="faq-text d-md-flex justify-content-between mt-2" style="width: 80%;">
+                                        <li>Project Management</li>
+                                        <li>Project Management</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -322,14 +322,14 @@
                             <div id="collapse-4" class="accordion-collapse collapse"
                                 aria-labelledby="collapse-item-4" data-bs-parent="#serviceAccordion">
                                 <div class="accordion-body">
-                                    <p class="faq-text">House
-                                        renovation involves the process
-                                        of improving or updating the
-                                        existing structure, features, or
-                                        systems of a house. Whether its
-                                        for functional reasons,
-                                        aesthetic
-                                        upgrades</p>
+                                    <ul class="faq-text d-md-flex justify-content-between" style="width: 80%;">
+                                        <li>Project Planning</li>
+                                        <li>Project Management</li>
+                                    </ul>
+                                    <ul class="faq-text d-md-flex justify-content-between mt-2" style="width: 80%;">
+                                        <li>Project Management</li>
+                                        <li>Project Management</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -350,10 +350,10 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="cta-group justify-content-lg-end justify-content-center"><a href="contact.html"
+                <div class="cta-group justify-content-lg-end justify-content-center"><a href="{{ url('/contact_us') }}"
                         class="th-btn style1 th-icon">Get
                         Consultations<i class="fa-regular fa-arrow-right ms-2"></i></a>
-                    <a href="contact.html" class="th-btn style3 th-icon">Work With Us<i
+                    <a href="{{ url('/contact_us') }}" class="th-btn style3 th-icon">Work With Us<i
                             class="fa-regular fa-arrow-right ms-2"></i></a>
                 </div>
             </div>
@@ -495,7 +495,7 @@
                             Latest Work</h2>
                     </div>
                 </div>
-                <div class="col-md-auto"><a href="project.html" class="th-btn style1 th-icon">View All Work<i
+                <div class="col-md-auto"><a href="{{ url('/project') }}" class="th-btn style1 th-icon">View All Work<i
                             class="fa-regular fa-arrow-right ms-2"></i></a></div>
             </div>
         </div>
@@ -505,6 +505,22 @@
             <div class="swiper th-slider has-shadow" id="projectSlider2"
                 data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"3"},"1200":{"slidesPerView":"4"}}}'>
                 <div class="swiper-wrapper">
+                    @foreach ($projects ?? [] as $project)
+                    <div class="swiper-slide">
+                        <div class="project-box">
+                            <div class="project-box-img"><img src="{{ asset('storage/' . $project->new_image) }}"
+                                    alt="{{ $project->name }}"></div>
+                            <div class="project-box-content">
+                                <p class="project-subtitle">{{ $project->projectCategory->name ?? 'Category' }}</p>
+                                <h3 class="box-title"><a href="{{ url('project_details/' . $project->id) }}">{{ $project->name }}</a></h3>
+                                <a href="{{ asset('storage/' . $project->new_image) }}"
+                                    class="gallery-btn popup-image"><i class="fa-regular fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                    
+                    @if (!isset($projects) || count($projects ?? []) == 0)
                     <div class="swiper-slide">
                         <div class="project-box">
                             <div class="project-box-img"><img src="{{ asset('assets/img/project/project_2_1.jpg') }}"
@@ -553,42 +569,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="project-box">
-                            <div class="project-box-img"><img src="{{ asset('assets/img/project/project_2_1.jpg') }}"
-                                    alt="project image"></div>
-                            <div class="project-box-content">
-                                <p class="project-subtitle">Contemporary</p>
-                                <h3 class="box-title"><a href="project-details.html">Contemporary
-                                        Villa</a></h3><a href="{{ asset('assets/img/project/project_2_1.jpg') }}"
-                                    class="gallery-btn popup-image"><i class="fa-regular fa-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="project-box">
-                            <div class="project-box-img"><img src="{{ asset('assets/img/project/project_2_2.jpg') }}"
-                                    alt="project image"></div>
-                            <div class="project-box-content">
-                                <p class="project-subtitle">Construction</p>
-                                <h3 class="box-title"><a href="project-details.html">Building
-                                        Construction</a></h3><a href="{{ asset('assets/img/project/project_2_2.jpg') }}"
-                                    class="gallery-btn popup-image"><i class="fa-regular fa-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="project-box">
-                            <div class="project-box-img"><img src="{{ asset('assets/img/project/project_2_3.jpg') }}"
-                                    alt="project image"></div>
-                            <div class="project-box-content">
-                                <p class="project-subtitle">Industrial</p>
-                                <h3 class="box-title"><a href="project-details.html">Industrial
-                                        Design</a></h3><a href="{{ asset('assets/img/project/project_2_3.jpg') }}"
-                                    class="gallery-btn popup-image"><i class="fa-regular fa-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
+                    @endif
                 </div>
                 <div class="slider-pagination"></div>
             </div>

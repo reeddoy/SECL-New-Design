@@ -213,10 +213,10 @@
                     <div class="team-content">
                         <p class="sec-text">Thank you for visiting SECL. We are very excited to work with you.</p>
                         <div class="th-social"> 
-                            <a href="{{ $member->facebook }}"><i class="fab fa-facebook-f"></i></a> 
-                            <a href="{{ $member->twitter }}"><i class="fab fa-twitter"></i></a>
-                            <a href="{{ $member->instagram }}"><i class="fab fa-instagram"></i></a>
-                            <a href="{{ $member->linkedin }}"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="{{ $member->facebook }}" target="_blank"><i class="fab fa-facebook-f"></i></a> 
+                            <a href="{{ $member->twitter }}" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="{{ $member->instagram }}" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="{{ $member->linkedin }}" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                 </div>

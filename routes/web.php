@@ -3,9 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [PageController::class, 'home']);
 
 Route::get('/contact_us', function () {
     return view('contact');
@@ -17,9 +15,9 @@ Route::get('/service', function () {
     return view('service');
 });
 
-Route::get('/project', function () {
-    return view('project');
-});
+Route::get('/project', [PageController::class, 'project']);
+
+Route::get('/project_details/{id}', [PageController::class, 'project_details']);
 
 Route::get('/faq', function () {
     return view('faq');

@@ -19526,8 +19526,8 @@ span.select2-selection.select2-selection--single:focus {
     z-index: 2;
 }
 .project-box-img img {
-    width: 100%;
-    height: 100%;
+    width: 400px;
+    height: 300px;
     -webkit-transition: 1.3s all ease;
     transition: 1.3s all ease;
 }

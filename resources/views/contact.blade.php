@@ -31,31 +31,31 @@
                     <div class="contact-info">
                         <div class="contact-info_icon"><i class="fa-light fa-location-dot"></i></div>
                         <div class="media-body">
-                            <p class="contact-info_label">Our Address</p><a href="https://www.google.com/maps"
-                                class="contact-info_link">2690 Hiltona Street Victoria Road, New York, Canada</a>
+                            <p class="contact-info_label">Our Address</p><a href="https://maps.app.goo.gl/F92Luq6Jp6S2fNQB7"
+                                class="contact-info_link">House No. 44, Level. 5, Road No. 1, Sector 3, Uttara, Dhaka</a>
                         </div>
                     </div>
                     <div class="contact-info">
                         <div class="contact-info_icon"><i class="fa-light fa-phone"></i></div>
                         <div class="media-body">
-                            <p class="contact-info_label">Contact Number</p><a href="tel:256214203215"
-                                class="contact-info_link">Mobile: +256 214 203 215</a> <a
-                                href="mailto:info@konta.com" class="contact-info_link">Email: info@kotar.com</a>
+                            <p class="contact-info_label">Contact Number</p><a href="tel:+8809611900748"
+                                class="contact-info_link">Mobile: +880 9611900748</a> <a
+                                href="mailto:contact@shahrishconstruction.com" class="contact-info_link">Email: contact@shahrishconstruction.com</a>
                         </div>
                     </div>
                     <div class="contact-info">
                         <div class="contact-info_icon"><i class="fa-light fa-clock"></i></div>
                         <div class="media-body">
-                            <p class="contact-info_label">Working Hours</p><span class="contact-info_link">Monday -
-                                Saturday: 8:00 - 15:00</span> <span class="contact-info_link">Sunday: <span
-                                    class="text-theme">Closed</span></span>
+                            <p class="contact-info_label">Working Hours</p>
+                            <span class="contact-info_link">Sunday - Thursday</span>
+                            <span class="contact-info_link"><span class="text-theme">10:00 am - 06:00 pm</span></span>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-xl-8 col-lg-6">
                 <div class="contact-map"><iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3644.7310056272386!2d89.2286059153658!3d24.00527418490799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fe9b97badc6151%3A0x30b048c9fb2129bc!2sAngfuztheme!5e0!3m2!1sen!2sbd!4v1651028958211!5m2!1sen!2sbd"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.7966087898144!2d90.3949829!3d23.861355099999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c50006678e83%3A0x5c13582a0e7d56cc!2sShahrish%20Engineering%20and%20Construction%20Ltd!5e0!3m2!1sen!2sbd!4v1744886254109!5m2!1sen!2sbd"
                         allowfullscreen="" loading="lazy"></iframe></div>
             </div>
         </div>
